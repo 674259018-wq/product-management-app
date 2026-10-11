@@ -2,8 +2,6 @@ import { Sequelize } from "sequelize";
 import dotnev from "dotenv";
 dotnev.config();
 
-const databaseUrl = process.env.DATABASE_URL_UNPOOLED;
-
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
@@ -30,5 +28,3 @@ const connectDB = async () => {
   }
 };
 export { sequelize, connectDB };
-
-
